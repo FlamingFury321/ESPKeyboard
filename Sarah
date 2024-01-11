@@ -8,6 +8,5 @@ $BatFileContent = @'
 for /L %%i in (1,1,10) do (
     powershell -Command "[System.Windows.MessageBox]::Show('$Message','$Title')"
 )
-powershell -Command "Add-Type -AssemblyName System.Speech; \$s = New-Object System.Speech.Synthesis.SpeechSynthesizer; \$s.Speak('$Sentence')"
 '@
 Set-Content -Path $BatFilePath -Value $BatFileContent
